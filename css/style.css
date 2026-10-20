@@ -1200,48 +1200,80 @@ html {
 
   /* ИСПРАВЛЕНИЕ ФОНА (HERO) НА ТЕЛЕФОНЕ */
   .hero {
-    min-height: 100vh;
-    padding: 100px 18px 50px 18px;
-    background-image: 
+    min-height: 100svh;
+    padding: 100px 20px 48px;
+    justify-content: center;
+    text-align: center;
+    background-image:
       linear-gradient(
-        180deg, 
-        rgba(8, 11, 20, 0.92) 0%, 
-        rgba(8, 11, 20, 0.8) 60%, 
+        180deg,
+        rgba(8, 11, 20, 0.78) 0%,
+        rgba(8, 11, 20, 0.7) 45%,
         #080B14 100%
       ),
-      url("image.jpg");
-    background-position: center 80%;
+      url("../img/image.jpg");
+    background-position: center;
     background-size: cover;
   }
 
+  /* Используем фоновое изображение из CSS, чтобы оно не перекрывало контент */
+  .hero-background,
+  .hero > .background {
+    display: none;
+  }
+
   .hero-content {
-    max-width: 100%;
-    margin-top: 0;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .servers-group {
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .server-tags {
+    justify-content: center;
+    gap: 7px;
+  }
+
+  .server-badge {
+    font-size: 10px;
+    padding: 5px 10px;
   }
 
   .hero-title {
-    font-size: 34px;
-    line-height: 1.1;
-    margin: 10px 0;
+    font-size: clamp(36px, 10vw, 52px);
+    line-height: 1.04;
+    margin: 0 0 14px;
+    text-align: center;
   }
 
   .hero-subtitle {
-    font-size: 14px;
+    max-width: 390px;
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .hero-subtitle br {
+    display: none;
   }
 
   .hero-actions {
-    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    gap: 10px;
+    max-width: 340px;
+    margin-top: 24px;
   }
 
-  .btn-wrap, .btn-primary, .btn-secondary {
+  .btn-secondary {
     width: 100%;
-  }
-
-  .btn-primary, .btn-secondary {
-    padding: 13px 20px;
-    font-size: 14px;
+    padding: 15px 20px;
   }
 
   /* ИСПРАВЛЕНИЕ РАЗМЕРА БЛОКОВ ПРЕИМУЩЕСТВ НА ТЕЛЕФОНЕ */

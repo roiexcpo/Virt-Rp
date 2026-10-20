@@ -153,10 +153,17 @@
             <a href="#" class="modal-close">&times;</a>
             <h3>Забери бесплатный промо на <span style="color:#9d3bff">500.000$</span></h3>
             <p style="color:#8b92a5; font-size:14px; margin-bottom:20px;">Введи почту для получения промокода на любой сервер:</p>
-            <form action="#successPromoModal">
-                <input type="email" placeholder="Твой Email" required class="modal-input" pattern="[a-zA-Z0-9.+%+\-]+@[a-zA-Z0-9.\-]+\. [a-zA-Z]{2,}$" tit>
-                <button type="submit" class="modal-submit">Получить промокод</button>
-            </form>
+            <form action="#successPromoModal" method="get">
+    <input
+        type="email"
+        name="email"
+        placeholder="Твой Email"
+        autocomplete="email"
+        required
+        class="modal-input"
+    >
+    <button type="submit" class="modal-submit">Получить промокод</button>
+</form>
         </div>
     </div>
 
